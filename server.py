@@ -69,6 +69,7 @@ def command() -> list[str]:
     args = [sys.executable, "-m", "yt_dlp", "--ignore-config", "--no-cache-dir",
             "--no-playlist", "--no-warnings", "--socket-timeout", "12",
             "--retries", "2", "--fragment-retries", "2", "--extractor-retries", "2",
+            "--extractor-args", "youtube:player_client=android,ios,mweb",
             "--ffmpeg-location", ffmpeg_path()]
     if shutil.which("node"):
         args += ["--js-runtimes", "node"]
